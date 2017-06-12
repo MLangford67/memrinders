@@ -1,0 +1,11 @@
+<h1>Reminders Home</h1>
+
+
+<a href="/addReminder">Add Reminder</a>
+<a href="/admin-view">Admin View</a>
+<ul>
+  <li ng-repeat='r in vm.reminders'>{{r.name}} {{r.date}} {{r.time}}
+  <a href="/editReminder/{{r._id}}">Edit</a>
+  <a href="#" ng-click='vm.removeReminder(r._id)'>Delete</a>
+  </li>
+</ul>
